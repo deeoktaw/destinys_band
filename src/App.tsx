@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { BgMark } from './components/BgMark';
 import { PlayerBar } from './components/PlayerBar';
 import type { Album, Catalog, Track } from './types';
 
@@ -162,90 +163,93 @@ export default function App() {
   const canNext = trackCount > 1;
 
   return (
-    <div className="app">
-      <header className="site-header">
-        <div className="brand">
-          <span className="name">Broad Jump</span>
-          <span className="tag">Радио и альбомы</span>
-        </div>
-        <nav className="header-links" aria-label="Соцсети">
-          <a href={TG_URL} target="_blank" rel="noreferrer">
-            Telegram
-          </a>
+    <>
+      <BgMark />
+      <div className="app">
+        <header className="site-header">
+          <div className="brand">
+            <span className="name">Broad Jump</span>
+            <span className="tag">Радио и альбомы</span>
+          </div>
+          <nav className="header-links" aria-label="Соцсети">
+            <a href={TG_URL} target="_blank" rel="noreferrer">
+              Telegram
+            </a>
+            {/* VK: placeholder — добавить ссылку позже */}
+          </nav>
+        </header>
+
+        <main className="main">
+          <h2 className="section-title">Альбомы</h2>
+          <p className="section-note">Выберите направление, затем трек — радио продолжит само.</p>
+
+          <div className="album-grid" role="list">
+            {albums.map((a) => (
+              <button
+                key={a.id}
+                type="button"
+                role="listitem"
+                className={`album-card${a.id === albumId ? ' active' : ''}`}
+                onClick={() => selectAlbum(a.id)}
+                aria-pressed={a.id === albumId}
+              >
+                <span>
+                  <span className="title">{a.title}</span>
+                  {a.note ? <span className="meta">{a.note}</span> : null}
+                </span>
+                <span className="count">{a.tracks.length}</span>
+              </button>
+            ))}
+          </div>
+
+          {album ? (
+            <>
+              <h2 className="section-title">{album.title}</h2>
+              {album.note ? <p className="section-note">{album.note}</p> : null}
+
+              {album.tracks.length === 0 ? (
+                <div className="empty-album">Пока без треков — скоро появятся.</div>
+              ) : (
+                <ul className="track-list">
+                  {album.tracks.map((t, i) => (
+                    <li key={t.id}>
+                      <button
+                        type="button"
+                        className={`track-row${t.id === trackId ? ' active' : ''}`}
+                        onClick={() => playTrack(i)}
+                      >
+                        <span className="num">{i + 1}</span>
+                        <span className="t-title">{t.title}</span>
+                        <span className="playing-dot" aria-hidden />
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          ) : null}
+        </main>
+
+        <footer className="site-footer">
+          <div>
+            Broad Jump ·{' '}
+            <a href={TG_URL} target="_blank" rel="noreferrer">
+              @WonderAcoustic
+            </a>
+          </div>
           {/* VK: placeholder — добавить ссылку позже */}
-        </nav>
-      </header>
+        </footer>
 
-      <main className="main">
-        <h2 className="section-title">Альбомы</h2>
-        <p className="section-note">Выберите направление, затем трек — радио продолжит само.</p>
-
-        <div className="album-grid" role="list">
-          {albums.map((a) => (
-            <button
-              key={a.id}
-              type="button"
-              role="listitem"
-              className={`album-card${a.id === albumId ? ' active' : ''}`}
-              onClick={() => selectAlbum(a.id)}
-              aria-pressed={a.id === albumId}
-            >
-              <span>
-                <span className="title">{a.title}</span>
-                {a.note ? <span className="meta">{a.note}</span> : null}
-              </span>
-              <span className="count">{a.tracks.length}</span>
-            </button>
-          ))}
-        </div>
-
-        {album ? (
-          <>
-            <h2 className="section-title">{album.title}</h2>
-            {album.note ? <p className="section-note">{album.note}</p> : null}
-
-            {album.tracks.length === 0 ? (
-              <div className="empty-album">Пока без треков — скоро появятся.</div>
-            ) : (
-              <ul className="track-list">
-                {album.tracks.map((t, i) => (
-                  <li key={t.id}>
-                    <button
-                      type="button"
-                      className={`track-row${t.id === trackId ? ' active' : ''}`}
-                      onClick={() => playTrack(i)}
-                    >
-                      <span className="num">{i + 1}</span>
-                      <span className="t-title">{t.title}</span>
-                      <span className="playing-dot" aria-hidden />
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </>
-        ) : null}
-      </main>
-
-      <footer className="site-footer">
-        <div>
-          Broad Jump ·{' '}
-          <a href={TG_URL} target="_blank" rel="noreferrer">
-            @WonderAcoustic
-          </a>
-        </div>
-        {/* VK: placeholder — добавить ссылку позже */}
-      </footer>
-
-      <PlayerBar
-        trackTitle={currentTrack?.track.title ?? null}
-        albumTitle={currentTrack?.album.title ?? album?.title ?? null}
-        playing={playing}
-        canPlay={canPlay}
-        canNext={canNext}
-        onToggle={togglePlay}
-        onNext={playNext}
-      />
-    </div>
+        <PlayerBar
+          trackTitle={currentTrack?.track.title ?? null}
+          albumTitle={currentTrack?.album.title ?? album?.title ?? null}
+          playing={playing}
+          canPlay={canPlay}
+          canNext={canNext}
+          onToggle={togglePlay}
+          onNext={playNext}
+        />
+      </div>
+    </>
   );
 }
