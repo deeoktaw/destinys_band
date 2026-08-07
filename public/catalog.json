@@ -22,6 +22,144 @@
           "title": "Well done an Palermo",
           "src": "./music/destiny-s-band/well-done-an-palermo.mp3",
           "albumId": "destiny-s-band"
+        },
+        {
+          "id": "back-river",
+          "title": "Back River",
+          "src": "./music/destiny-s-band/back-river.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "deep-soul-rock-and-blues",
+          "title": "Deep Soul Rock & Blues",
+          "src": "./music/destiny-s-band/deep-soul-rock-and-blues.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "deep-soul-rock-blues",
+          "title": "Deep Soul Rock Blues",
+          "src": "./music/destiny-s-band/deep-soul-rock-blues.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "jimm-bee-blues-cover",
+          "title": "Jimm Bee Blues Cover",
+          "src": "./music/destiny-s-band/jimm-bee-blues-cover.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "jimm-bee-blues-cover-2",
+          "title": "Jimm Bee Blues Cover 2",
+          "src": "./music/destiny-s-band/jimm-bee-blues-cover-2.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "klavi-sinq",
+          "title": "KLAVI Sinq",
+          "src": "./music/destiny-s-band/klavi-sinq.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "mechanic-rock",
+          "title": "Mechanic Rock",
+          "src": "./music/destiny-s-band/mechanic-rock.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "mega-6d-166d96012491",
+          "title": "Mega 6d",
+          "src": "./music/destiny-s-band/mega-6d-166d96012491.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "soul-dim-dew",
+          "title": "Soul Dim Dew",
+          "src": "./music/destiny-s-band/soul-dim-dew.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "soul-rock-blues-cover",
+          "title": "Soul Rock Blues Cover",
+          "src": "./music/destiny-s-band/soul-rock-blues-cover.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "sssr",
+          "title": "SSSR",
+          "src": "./music/destiny-s-band/sssr.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "sun-4o-2gt",
+          "title": "Sun 4o 2GT",
+          "src": "./music/destiny-s-band/sun-4o-2gt.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "suno-121116-2",
+          "title": "SUNO 121116-2",
+          "src": "./music/destiny-s-band/suno-121116-2.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "suno-121126-2",
+          "title": "SUNO 121126-2",
+          "src": "./music/destiny-s-band/suno-121126-2.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "suno-138142-1",
+          "title": "SUNO 138142-1",
+          "src": "./music/destiny-s-band/suno-138142-1.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "suno-138142-2",
+          "title": "SUNO 138142-2",
+          "src": "./music/destiny-s-band/suno-138142-2.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "suno-89345-1",
+          "title": "SUNO 89345-1",
+          "src": "./music/destiny-s-band/suno-89345-1.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "the-sorrow-poetry",
+          "title": "The Sorrow Poetry",
+          "src": "./music/destiny-s-band/the-sorrow-poetry.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "track-5321481758397457848",
+          "title": "Track 5321481758397457848",
+          "src": "./music/destiny-s-band/2-5321481758397457848.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "veselo-i-bystro-2",
+          "title": "Veselo i bystro 2",
+          "src": "./music/destiny-s-band/veselo-i-bystro-2.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "wonder-acoustic-11",
+          "title": "Wonder Acoustic 11",
+          "src": "./music/destiny-s-band/wonder-acoustic-11.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "vechernie-progulki-1",
+          "title": "Вечерние прогулки",
+          "src": "./music/destiny-s-band/vechernie-progulki-1.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "nuzhno-bezhat",
+          "title": "Нужно бежать, чтобы оставаться на месте",
+          "src": "./music/destiny-s-band/nuzhno-bezhat-chtoby-ostavatsya-na-meste.mp3",
+          "albumId": "destiny-s-band"
         }
       ]
     },
