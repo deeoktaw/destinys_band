@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+.env.local
+*.log
+.DS_Store
+tsconfig.tsbuildinfo
+/music/
+NOTES.local.md
+*.local.md

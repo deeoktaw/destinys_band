@@ -1,0 +1,35 @@
+{
+  "albums": [
+    {
+      "id": "destiny-s-band",
+      "title": "Destiny's Band",
+      "note": "Music & lyrics fully yours.",
+      "tracks": [
+        {
+          "id": "wind-cheerful-noise-main",
+          "title": "The wind is making a cheerful noise (main)",
+          "src": "./music/destiny-s-band/the-wind-is-making-a-cheerful-noise-main.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "wind-cheerful-noise",
+          "title": "The wind is making a cheerful noise",
+          "src": "./music/destiny-s-band/the-wind-is-making-a-cheerful-noise.mp3",
+          "albumId": "destiny-s-band"
+        },
+        {
+          "id": "well-done-palermo",
+          "title": "Well done an Palermo",
+          "src": "./music/destiny-s-band/well-done-an-palermo.mp3",
+          "albumId": "destiny-s-band"
+        }
+      ]
+    },
+    {
+      "id": "on-words-of-poets",
+      "title": "On words of poets",
+      "note": "Ахматова и др. — скоро.",
+      "tracks": []
+    }
+  ]
+}
